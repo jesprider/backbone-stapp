@@ -1,0 +1,28 @@
+{
+  "name": "backbone-stapp",
+  "version": "0.0.1",
+  "authors": [
+    "Roman Alekseev <jesprider@gmail.com>"
+  ],
+  "description": "Starter app with backbone.js",
+  "main": "app.js",
+  "keywords": [
+    "backbone",
+    "app",
+    "pattern",
+    "spa",
+    "starter"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4"
+  }
+}

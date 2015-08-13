@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'>
+    <title>Backbone starter app</title>
+</head>
+<body>
+    <div class="stapp container">
+        <div class="stapp_content"></div>
+        <div class="stapp_loader"></div>
+        <div class="stapp_author"></div>
+    </div>
+
+    <!-- Home page template -->
+    <script type="text/template" id="home-template">
+        <div class="stapp_h"><%= title %></div>
+        <button class="stapp_btn js-open-menu"><%= btnText %></button>
+    </script>
+
+    <!-- Menu template-->
+    <script type="text/template" id="menu-template">
+        <div class="stapp_h"><%= title %></div>
+        <ul class="stapp_list">
+            <% _.each(menu, function(item) { %>
+            <li class="stapp_list_i">
+                <a class="xmas_list_a" href="<%= item.url %>"><%= item.title %></a>
+            </li>
+            <% }); %>
+        </ul>
+    </script>
+
+    <!-- Super page template -->
+    <script type="text/template" id="superPage-template">
+        <div class="stapp_h"><%= title %></div>
+        <button class="stapp_btn js-open-menu"><%= btnText %></button>
+    </script>
+
+    <!-- Error page template -->
+    <script type="text/template" id="error-template">
+        <div class="stapp_h"><%= title %></div>
+        <button class="stapp_btn js-open-menu"><%= btnText %></button>
+    </script>
+
+    <script>
+        var app = app || {
+            Models: {},
+            Collections: {},
+            Views: {},
+            Router: {}
+        };
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script>
+    <script src="js/models/user.js"></script>
+    <script src="js/routers/router.js"></script>
+
+    <script src="js/views/home.js"></script>
+    <script src="js/views/menu.js"></script>
+    <script src="js/views/error.js"></script>
+    <script src="js/views/superPage.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
